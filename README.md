@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the full-stack implementation of **BlinkRise**, an intelligent drowsiness detection system. BlinkRise aims to enhance driver safety by monitoring driver alertness in real-time. It leverages advanced computer vision techniques to analyze eye blink patterns and facial landmarks, detecting early signs of drowsiness and fatigue to help prevent accidents caused by inattention. The system comprises a Python Flask backend for video processing and AI inference, and a React frontend for the user interface and alerts.
+This repository contains the full-stack implementation of **BlinkRise**, an intelligent drowsiness detection system. BlinkRise aims to enhance driver safety by monitoring driver alertness in real-time. It leverages advanced computer vision techniques to analyze eye blink patterns and facial landmarks, detecting early signs of drowsiness and fatigue to help prevent accidents caused by inattention. The system comprises a Python Flask backend for video processing and ml model integration, and a React frontend for the user interface and alerts.
 
 ---
 
