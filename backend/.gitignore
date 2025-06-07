@@ -1,0 +1,29 @@
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+
+# VSCode settings (if using VSCode)
+.vscode/
+
+# Ignore compiled beep warning (if it's generated or temporary)
+beep-warning-6*
+
+# Ignore model checkpoints or temporary data
+*.ckpt
