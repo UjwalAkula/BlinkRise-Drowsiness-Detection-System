@@ -1,4 +1,3 @@
-```
 # BlinkRise - Drowsiness Detection System
 
 ---
@@ -130,45 +129,6 @@ To run BlinkRise locally:
 
 ---
 
-## How It Works
-
-1.  **Face Detection:** The system initiates by detecting faces within the video stream using MediaPipe's efficient facial detection capabilities.
-2.  **Facial Landmark Detection:** Once a face is detected, MediaPipe precisely identifies 468 3D facial landmarks, with particular focus on the eye regions.
-3.  **Eye Aspect Ratio (EAR) Calculation:** The Eye Aspect Ratio (EAR) is computed based on specific 2D coordinates of the eye landmarks. This ratio provides a quantitative measure of eye openness. The formula used is:
-    $$
-    EAR = \frac{(|P_2 - P_6| + |P_3 - P_5|)}{2 \cdot |P_1 - P_4|}
-    $$
-    *Where $P_1$ through $P_6$ represent the specific eye landmark coordinates.*
-4.  **Drowsiness Classification:** The calculated EAR values, along with blink status, are fed into a pre-trained **Support Vector Machine (SVM)** model (`svm_model.pkl`). This model classifies the current state as 'Drowsy' or 'Non_Drowsy' based on learned patterns from the training data. The system also tracks a `counter` for consecutive drowsy frames.
-5.  **Alert Generation:** If the system detects a 'Drowsy' state for a predefined number of consecutive frames, it triggers an alert. This involves displaying a prominent visual warning on the video feed and playing an audible alarm via the frontend's audio system, prompting the user to regain alertness.
-
----
-
-## File Structure
-
-```
-BlinkRise-Drowsiness-Detection-System/
-├── backend/                        # Python Flask backend application
-│   ├── app.py                      # Flask main application, API routes, static file serving
-│   ├── controller.py               # Core drowsiness detection logic, camera manager, model loading
-│   ├── requirements.txt            # Python dependencies for the backend
-│   └── (other backend specific files/folders)
-├── frontend/                       # React frontend application
-│   ├── public/                     # Publicly accessible static assets
-│   │   └── alarm.mp3               # Audio file for drowsiness alarm
-│   ├── src/                        # React source code
-│   │   ├── App.jsx                 # Main React component, state, API interaction
-│   │   ├── components/             # Reusable React components (VideoPart, MetricBoxes)
-│   │   └── (other core React files like index.css, main.jsx)
-│   ├── package.json                # Node.js/React project metadata and dependencies
-│   └── (other frontend specific files/folders)
-├── svm_model.pkl                   # Pre-trained Support Vector Machine (SVM) model
-├── .gitignore                      # Specifies files/folders to be ignored by Git
-└── README.md                       # This README file
-```
-
----
-
 ## 💡 Inspiration
 
 Drowsy driving causes thousands of preventable accidents every year. BlinkRise was born from the idea that combining machine learning, computer vision, and web technologies can create accessible safety solutions.
@@ -176,4 +136,3 @@ Drowsy driving causes thousands of preventable accidents every year. BlinkRise w
 ---
 
 **Stay Alert, Stay Safe! 🚗💤**
-```
